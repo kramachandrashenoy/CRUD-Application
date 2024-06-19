@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Delete Data</title>
+</head>
+<body>
+    <h1>Delete Data</h1>
+    <form action="/delete" method="post">
+        <label for="id">Select Data to Delete:</label>
+        <select id="id" name="id">
+            <!-- Options will be inserted by JavaScript -->
+        </select>
+        <button type="submit">Delete</button>
+    </form>
+    <a href="/">Back to Home</a>
+
+    <script>
+        fetch('/read')
+            .then(response => response.json())
+            .then(data => {
+                const select = document.getElementById('id');
+                data.forEach(item => {
+                    const option = document.createElement('option');
+                    option.value = item._id;
+                    option.textContent = JSON.stringify(item);
+                    select.appendChild(option);
+                });
+            });
+    </script>
+</body>
+</html>
