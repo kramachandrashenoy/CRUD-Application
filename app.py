@@ -3,9 +3,7 @@ from pymongo import MongoClient
 from bson.objectid import ObjectId
 import os
 
-
-
-app = Flask(__name__)
+app = Flask(__name__, static_url_path='/static')
 
 # Replace with your MongoDB connection string
 MONGO_URI = os.getenv('MONGO_URI', 'mongodb+srv://Ramachandra:Ramachandra2003@cluster0.hedzdql.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0')
@@ -80,4 +78,3 @@ def test_mongo():
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=os.environ.get('PORT', 8080))
-
