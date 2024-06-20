@@ -14,56 +14,58 @@ body {
     background-color: white;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
 
 h1 {
     color: #007bff;
 }
 
-.form-container {
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    margin-bottom: 20px;
+.dropdown-container {
+    margin-top: 20px;
 }
 
-.form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.dropdown {
+    display: inline-block;
+    position: relative;
 }
 
-.label {
-    display: block;
-    margin-bottom: 0.5em;
-}
-
-input[type="text"], select {
-    width: 100%;
-    padding: 0.5em;
-    margin-bottom: 1em;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-button {
+.dropbtn {
     background-color: #007bff;
     color: white;
-    padding: 0.5em 1em;
+    padding: 10px 20px;
+    font-size: 16px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
 }
 
-button:hover {
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    text-align: left;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
     background-color: #0056b3;
-}
-
-a {
-    color: #007bff;
-}
-
-a:hover {
-    text-decoration: underline;
 }
