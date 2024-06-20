@@ -6,14 +6,23 @@
     <link rel="stylesheet" href="/static/styles.css">
 </head>
 <body>
-    <h1>Welcome to Flask MongoDB CRUD Application</h1>
-    <nav>
-        <ul>
-            <li><a href="/create">Create</a></li>
-            <li><a href="/read">Read</a></li>
-            <li><a href="/update">Update</a></li>
-            <li><a href="/delete">Delete</a></li>
-        </ul>
-    </nav>
+    <div class="container">
+        <h1>Welcome to Flask MongoDB CRUD Application</h1>
+        <nav>
+            <ul>
+                <li>
+                    <div class="dropdown">
+                        <button class="dropbtn">Actions</button>
+                        <div class="dropdown-content">
+                            <a href="/create">Create</a>
+                            <a href="/read">Read</a>
+                            <a href="/update">Update</a>
+                            <a href="/delete">Delete</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </div>
 </body>
 </html>
