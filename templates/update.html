@@ -21,5 +21,19 @@
             <a href="/">Back to Home</a>
         </div>
     </div>
+
+    <script>
+        fetch('/read')
+            .then(response => response.json())
+            .then(data => {
+                const select = document.getElementById('id');
+                data.forEach(item => {
+                    const option = document.createElement('option');
+                    option.value = item._id;
+                    option.textContent = JSON.stringify(item);
+                    select.appendChild(option);
+                });
+            });
+    </script>
 </body>
 </html>
