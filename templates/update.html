@@ -6,30 +6,20 @@
     <link rel="stylesheet" href="/static/styles.css">
 </head>
 <body>
-    <h1>Update Data</h1>
-    <form action="/update" method="post">
-        <label for="id">Select Data to Update:</label>
-        <select id="id" name="id">
-            <!-- Options will be inserted by JavaScript -->
-        </select>
-        <label for="data">New Data:</label>
-        <input type="text" id="data" name="data">
-        <button type="submit">Update</button>
-    </form>
-    <a href="/">Back to Home</a>
-
-    <script>
-        fetch('/read')
-            .then(response => response.json())
-            .then(data => {
-                const select = document.getElementById('id');
-                data.forEach(item => {
-                    const option = document.createElement('option');
-                    option.value = item._id;
-                    option.textContent = JSON.stringify(item);
-                    select.appendChild(option);
-                });
-            });
-    </script>
+    <div class="container">
+        <h1>Update Data</h1>
+        <div class="form-container">
+            <form action="/update" method="post" class="form">
+                <label for="id">Select Data to Update:</label>
+                <select id="id" name="id">
+                    <!-- Options will be inserted by JavaScript -->
+                </select>
+                <label for="data">New Data:</label>
+                <input type="text" id="data" name="data">
+                <button type="submit">Update</button>
+            </form>
+            <a href="/">Back to Home</a>
+        </div>
+    </div>
 </body>
 </html>

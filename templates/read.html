@@ -6,23 +6,12 @@
     <link rel="stylesheet" href="/static/styles.css">
 </head>
 <body>
-    <h1>Read Data</h1>
-    <ul id="data-list">
-        <!-- Data will be inserted here by JavaScript -->
-    </ul>
-    <a href="/">Back to Home</a>
-
-    <script>
-        fetch('/read')
-            .then(response => response.json())
-            .then(data => {
-                const dataList = document.getElementById('data-list');
-                data.forEach(item => {
-                    const listItem = document.createElement('li');
-                    listItem.textContent = JSON.stringify(item);
-                    dataList.appendChild(listItem);
-                });
-            });
-    </script>
+    <div class="container">
+        <h1>Read Data</h1>
+        <ul id="data-list" class="data-list">
+            <!-- Data will be inserted here by JavaScript -->
+        </ul>
+        <a href="/">Back to Home</a>
+    </div>
 </body>
 </html>

@@ -6,12 +6,16 @@
     <link rel="stylesheet" href="/static/styles.css">
 </head>
 <body>
-    <h1>Create Data</h1>
-    <form action="/create" method="post">
-        <label for="data">Data:</label>
-        <input type="text" id="data" name="data">
-        <button type="submit">Create</button>
-    </form>
-    <a href="/">Back to Home</a>
+    <div class="container">
+        <h1>Create Data</h1>
+        <div class="form-container">
+            <form action="/create" method="post" class="form">
+                <label for="data">Data:</label>
+                <input type="text" id="data" name="data">
+                <button type="submit">Create</button>
+            </form>
+            <a href="/">Back to Home</a>
+        </div>
+    </div>
 </body>
 </html>
